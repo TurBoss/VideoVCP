@@ -5,16 +5,16 @@ Video VCP - Test computer vision features
 
 ## Quick install
 
-install linuxcnc using the stretch iso
+Install linuxcnc using the stretch iso
 
 http://www.linuxcnc.org/testing-stretch-rtpreempt/ 
 
 once boot upgrade to linuxcnc version 2.8 or master
 
-* Dependencies
+### Dependencies
 
 ```
-$ sudo apt install python-pyqt5 python-pyqt5.qtquick python-dbus.mainloop.pyqt5 python-pyqt5.qtopengl python-pyqt5.qsci python-pyqt5.qtmultimedia qml-module-qtquick-controls gstreamer1.0-plugins-bad libqt5multimedia5-plugins pyqt5-dev-tools python-dev python-setuptools python-pip git
+$ sudo apt install python-pyqt5 python-pyqt5.qtquick python-dbus.mainloop.pyqt5 python-pyqt5.qtopengl python-pyqt5.qsci python-pyqt5.qtmultimedia qml-module-qtquick-controls gstreamer1.0-plugins-bad libqt5multimedia5-plugins pyqt5-dev-tools python-dev python-setuptools python-pip git python-opencv
 ```
 
 ## Installation
@@ -23,15 +23,16 @@ there are two ways to install the video_vcp "quick install" or "developer"
 
 ### Quick Install
 
-it will install the video_vcp and allow you to use it
+This will install the video_vcp and allow you to use it
 
 ```
+$ pip install --user git+https://github.com/kcjengr/qtpyvcp.computer-vision.git
 $ pip install --user git+https://github.com/TurBoss/video_vcp.git
 ```
 
 ### Developer Install
 
-it will install the video_vcp from a local directory allowing us to make any modifications
+This will install the video_vcp from a local directory allowing us to make any modifications
 without having to reinstall each time
 
 
@@ -39,16 +40,28 @@ clone the video_vcp repository
 
 ```
 $ git clone https://github.com/TurBoss/video_vcp.git
+$ git clone https://github.com/kcjengr/qtpyvcp.computer-vision.git
 ```
 
-install the dev version using pip
+Install the computer vision widget
+
+```
+$ cd qtpyvcp.computer-vision
+$ pip install -e .
+$ cd ..
+
+```
+
+
+Install localy using pip.
 
 ```
 $ cd video_vcp
 $ pip install -e .
+$ cd ..
 ```
 
-now you can run editvcp to edit the interface
+Now you can run editvcp to edit the interface.
 
 ```
 $ editvcp video_vcp
@@ -60,6 +73,11 @@ $ editvcp video_vcp
 plug your camera and make sure its show in /dev/video0 or /dev/video1
 
 then run 
+
+```
+$ linuxcnc video_vcp/linuxcnc/configs/sim.video_vcp/xyz.ini
+
+```
 
 
 ## Documentation
@@ -85,10 +103,10 @@ QtPyVCP [documentation](https://kcjengr.github.io/qtpyvcp/).
 * PyQt5 or PySide2
 * [QtPyVCP](https://qtpyvcp.kcjengr.com/)
 
-VideoVCP is developed and tested using the LinuxCNC Debian 10
+VideoVCP is developed and tested using the LinuxCNC Debian 9 and 10
 
-It should run on any system that can have PyQt5 installed, but Debian 10 is the only OS
-that is officially supported.
+It should run on any system that can have PyQt5 installed, but Debian 9 and 10 arr the only OS
+that are officially supported.
 
 
 ## DISCLAIMER

@@ -1,0 +1,31 @@
+{% include "default_menubar.yml" %}
+
+qtdesigner:
+  ui_file: ( windows.mainwindow.kwargs.ui_file )
+  qss_file: ( application.kwargs.stylesheet )
+
+vcp:
+  name: Video VCP
+  version: v0.0.1
+  author: TurBoss
+  description: Video VCP - Test computer vision features
+
+data_plugins:
+  status:
+    kwargs:
+      cycle_time: 75
+  clock:
+    provider: qtpyvcp.plugins.clock:Clock
+#  opcua:
+#    provider: qtpyvcp.plugins.opcua_server:OpcUA
+
+windows:
+  mainwindow:
+    provider: tnc.main:MainWindow
+    kwargs:
+      menu: ( default_menubar )
+      ui_file: {{ file.dir }}/ui/window.ui
+
+application:
+  kwargs:
+    stylesheet: {{ file.dir }}/style.qss

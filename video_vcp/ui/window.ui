@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="VCPMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>768</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>TurBoNC</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/images/logo.png</normaloff>:/images/logo.png</iconset>
+  </property>
+  <property name="toolTipDuration">
+   <number>-1</number>
+  </property>
+  <property name="promptAtExit" stdset="0">
+   <bool>false</bool>
+  </property>
+  <property name="promot_on_exit" stdset="0">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="main_gbox">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>MAIN</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="ActionButton" name="estop_abutton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>64</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>E-STOP</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>machine.estop.toggle</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="ActionButton" name="power_abutton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>POWER</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>machine.power.toggle</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="mode_gbox">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>MODE</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="ActionButton" name="actionbutton_27">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>MAN</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>machine.mode.manual</string>
+           </property>
+           <property name="position" stdset="0">
+            <string>first</string>
+           </property>
+           <property name="styleClass" stdset="0">
+            <string>option</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="ActionButton" name="actionbutton_28">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>AUTO</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>machine.mode.auto</string>
+           </property>
+           <property name="styleClass" stdset="0">
+            <string>option</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="ActionButton" name="actionbutton_29">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>MDI</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>machine.mode.mdi</string>
+           </property>
+           <property name="position" stdset="0">
+            <string>last</string>
+           </property>
+           <property name="styleClass" stdset="0">
+            <string>option</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="home_gbox">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>HOME</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="ActionButton" name="homeall_abutton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>ALL</string>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>machine.home.all</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="part_gbox">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>PART</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="MDIButton" name="zero_all_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>ZERO
+ALL</string>
+           </property>
+           <property name="rules" stdset="0">
+            <string>[
+    {
+        &quot;channels&quot;: [
+            {
+                &quot;url&quot;: &quot;status:g5x_index&quot;,
+                &quot;trigger&quot;: true,
+                &quot;type&quot;: &quot;int&quot;
+            }
+        ],
+        &quot;expression&quot;: &quot;&quot;,
+        &quot;name&quot;: &quot;G5x Index&quot;,
+        &quot;property&quot;: &quot;None&quot;
+    }
+]</string>
+           </property>
+           <property name="MDICommand" stdset="0">
+            <string>G10 L20 P{ch[0]} X0.0 Y0.0 Z0.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="DialogButton" name="zero_dbutton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>ZERO</string>
+           </property>
+           <property name="dialogName" stdset="0">
+            <string>set_work_offsets</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="program_gbox">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>PROGRAM</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="DialogButton" name="open_dbutton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>OPEN</string>
+           </property>
+           <property name="dialogName" stdset="0">
+            <string>open_file</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="ActionButton" name="run_abutton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>RUN</string>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>program.run</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="ActionButton" name="pause_abutton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PAUSE</string>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>program.pause</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="ActionButton" name="stop_abutton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>STOP</string>
+           </property>
+           <property name="actionName" stdset="0">
+            <string>program.abort</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Video device:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cantarell'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;/dev/video0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_5"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_6"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="OpenCVWidget" name="opencvwidget"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>&amp;Open ...</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="text">
+    <string>&amp;Reload</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As ...</string>
+   </property>
+  </action>
+  <action name="actionHome_X">
+   <property name="text">
+    <string>Home &amp;X</string>
+   </property>
+  </action>
+  <action name="actionHome_Y">
+   <property name="text">
+    <string>Home &amp;Y</string>
+   </property>
+  </action>
+  <action name="actionHome_Z">
+   <property name="text">
+    <string>Home &amp;Z</string>
+   </property>
+  </action>
+  <action name="action_EmergencyStop_toggle">
+   <property name="text">
+    <string>Toggle E-stop</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>machine.estop.toggle</string>
+   </property>
+  </action>
+  <action name="action_MachinePower_toggle">
+   <property name="text">
+    <string>Machine Power</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>machine.power.toggle</string>
+   </property>
+  </action>
+  <action name="actionHome_All">
+   <property name="text">
+    <string>Home All</string>
+   </property>
+   <property name="shortcut">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionRun_Program">
+   <property name="text">
+    <string>Run Program</string>
+   </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.run</string>
+   </property>
+  </action>
+  <action name="actionFile1">
+   <property name="text">
+    <string>File1</string>
+   </property>
+  </action>
+  <action name="actionReport_Actual_Position">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Report Actual Position</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="action_Mist_toggle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mist</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>coolant.mist.toggle</string>
+   </property>
+  </action>
+  <action name="action_Flood_toggle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Flood</string>
+   </property>
+   <property name="shortcut">
+    <string>F8</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>coolant.flood.toggle</string>
+   </property>
+  </action>
+  <action name="action_program_run">
+   <property name="text">
+    <string>Run Program</string>
+   </property>
+  </action>
+  <action name="action_coolant_floodToggle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Flood</string>
+   </property>
+  </action>
+  <action name="actionHalshow">
+   <property name="text">
+    <string>HAL Show</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>tool.halshow</string>
+   </property>
+  </action>
+  <action name="actionHalmeter">
+   <property name="text">
+    <string>HAL Meter</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>tool.halmeter</string>
+   </property>
+  </action>
+  <action name="actionHAL_Scope">
+   <property name="text">
+    <string>HAL Scope</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>tool.halscope</string>
+   </property>
+  </action>
+  <action name="actionCalibration">
+   <property name="text">
+    <string>Calibration</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>tool.calibration</string>
+   </property>
+  </action>
+  <action name="actionOverride_Limits">
+   <property name="text">
+    <string>Override Limits</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>machine.override-limits</string>
+   </property>
+  </action>
+  <action name="actionOverride_Limits_2">
+   <property name="text">
+    <string>Override Limits</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>machine.override-limits</string>
+   </property>
+  </action>
+  <action name="actionRun_From_Line">
+   <property name="text">
+    <string>Run From Line</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.run-from-line</string>
+   </property>
+  </action>
+  <action name="actionStep">
+   <property name="text">
+    <string>Step</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.step</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="text">
+    <string>Pause</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.pause</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.abort</string>
+   </property>
+  </action>
+  <action name="actionResume">
+   <property name="text">
+    <string>Resume</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.resume</string>
+   </property>
+  </action>
+  <action name="actionPause_at_M1">
+   <property name="text">
+    <string>Pause at 'M1'</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.optional-stop.toggle</string>
+   </property>
+  </action>
+  <action name="actionSkip_lines_with">
+   <property name="text">
+    <string>Skip lines with '/'</string>
+   </property>
+   <property name="actionName" stdset="0">
+    <string>program.block-delete.toggle</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DialogButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.dialog_button</header>
+  </customwidget>
+  <customwidget>
+   <class>OpenCVWidget</class>
+   <extends>QLabel</extends>
+   <header>qtpyvcp_computer_vision.widgets.opencv_widget</header>
+  </customwidget>
+  <customwidget>
+   <class>MDIButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
+  </customwidget>
+  <customwidget>
+   <class>VCPMainWindow</class>
+   <extends>QMainWindow</extends>
+   <header>qtpyvcp.widgets.form_widgets.main_window</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ActionButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.action_button</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>
