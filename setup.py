@@ -11,8 +11,8 @@ setup(
     description="Video VCP - Computer Vision VCP",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/TurBoss/video-vcp",
-    download_url="https://github.com/TurBoss/video-vcp/tarball/master",
+    url="https://github.com/TurBoss/VideoVCP",
+    download_url="https://github.com/TurBoss/VideoVCP/tarball/master",
     packages=find_packages(),
     include_package_data=True,
     entry_points={
@@ -24,6 +24,6 @@ setup(
         ],
     },
     install_requires=[
-	'qtpyvcp',
+        'qtpyvcp'
     ],
 )
