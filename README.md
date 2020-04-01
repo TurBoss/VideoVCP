@@ -3,7 +3,7 @@
 
 Video VCP - Test computer vision features
 
-## Quick install
+## Download LinuxCNC ISO
 
 Install linuxcnc using the stretch iso
 
@@ -17,7 +17,7 @@ once boot upgrade to linuxcnc version 2.8 or master
 $ sudo apt install python-pyqt5 python-pyqt5.qtquick python-dbus.mainloop.pyqt5 python-pyqt5.qtopengl python-pyqt5.qsci python-pyqt5.qtmultimedia qml-module-qtquick-controls gstreamer1.0-plugins-bad libqt5multimedia5-plugins pyqt5-dev-tools python-dev python-setuptools python-pip git python-opencv
 ```
 
-## Installation
+## VCP Installation
 
 there are two ways to install the video_vcp "quick install" or "developer"
 
