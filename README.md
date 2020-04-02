@@ -19,27 +19,27 @@ $ sudo apt install python-pyqt5 python-pyqt5.qtquick python-dbus.mainloop.pyqt5 
 
 ## VCP Installation
 
-there are two ways to install the video_vcp "quick install" or "developer"
+there are two ways to install the VideoVCP "quick install" or "developer"
 
 ### Quick Install
 
-This will install the video_vcp and allow you to use it
+This will install the VideoVCP and allow you to use it
 
 ```
 $ pip install --user git+https://github.com/kcjengr/qtpyvcp.computer-vision.git
-$ pip install --user git+https://github.com/TurBoss/video_vcp.git
+$ pip install --user git+https://github.com/TurBoss/VideoVCP.git
 ```
 
 ### Developer Install
 
-This will install the video_vcp from a local directory allowing us to make any modifications
+This will install the VideoVCP from a local directory allowing us to make any modifications
 without having to reinstall each time
 
 
-clone the video_vcp repository
+clone the VideoVCP repository
 
 ```
-$ git clone https://github.com/TurBoss/video_vcp.git
+$ git clone https://github.com/TurBoss/VideoVCP.git
 $ git clone https://github.com/kcjengr/qtpyvcp.computer-vision.git
 ```
 
@@ -56,7 +56,7 @@ $ cd ..
 Install localy using pip.
 
 ```
-$ cd video_vcp
+$ cd VideoVCP
 $ pip install -e .
 $ cd ..
 ```
@@ -64,7 +64,7 @@ $ cd ..
 Now you can run editvcp to edit the interface.
 
 ```
-$ editvcp video_vcp
+$ editvcp VideoVCP
 ```
 
 
@@ -75,7 +75,7 @@ plug your camera and make sure its show in /dev/video0 or /dev/video1
 then run 
 
 ```
-$ linuxcnc video_vcp/linuxcnc/configs/sim.video_vcp/xyz.ini
+$ linuxcnc VideoVCP/linuxcnc/configs/sim.video_vcp/xyz.ini
 
 ```
 
@@ -93,7 +93,7 @@ QtPyVCP [documentation](https://kcjengr.github.io/qtpyvcp/).
 * [The Matrix](https://riot.im/app/#/room/#qtpyvcp:matrix.org) (#qtpyvcp:matrix.org)
 * [Gitter](https://gitter.im/kcjengr/qtpyvcp)
 * [Discord](https://discord.gg/463hMhd)
-* [Issue Tracker](https://github.com/TurBoss/video_vcp/issues)
+* [Issue Tracker](https://github.com/TurBoss/VideoVCP/issues)
 
 
 ## Dependancies
