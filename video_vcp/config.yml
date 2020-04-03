@@ -16,8 +16,6 @@ data_plugins:
       cycle_time: 75
   clock:
     provider: qtpyvcp.plugins.clock:Clock
-#  opcua:
-#    provider: qtpyvcp.plugins.opcua_server:OpcUA
 
 windows:
   mainwindow:
