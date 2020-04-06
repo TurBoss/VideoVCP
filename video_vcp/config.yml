@@ -19,7 +19,7 @@ data_plugins:
 
 windows:
   mainwindow:
-    provider: tnc.main:MainWindow
+    provider: video_vcp.main:MainWindow
     kwargs:
       menu: ( default_menubar )
       ui_file: {{ file.dir }}/ui/window.ui
